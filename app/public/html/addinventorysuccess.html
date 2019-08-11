@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Added units to product success page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- reset.css -->
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- style.css-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- roboto font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid text-center mb-5 pt-3">
+
+        <div class="p-3 bg-cstm text-white roundedbody">
+            <h1>bAmazon Manager Express</h1>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <select onchange="location = this.options[this.selectedIndex].value;" class="mt-3 custom-select">
+                    <option>Menu</option>
+                    <option value="/">View all items for sale</option>
+                    <option value="/20ItemsOrLess">View Items with 20 or less stock</option>
+                    <option value="/addUnits">Add units to a products inventory</option>
+                    <option value="/newItem">Add a new item to the database</option>
+                    <option value="/deleteitem">Delete a item from the database</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="p-4">
+            <h3 id="itemsUnitsAdded"><u>Congratulations! You have updated an items quantity!</u></h3>
+        </div>
+
+        <div class="row text-center justify-content-center border border-1 border-success">
+
+            <div class="col-sm-12 col-10">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"><b>ID</b></th>
+                            <th scope="col"><b>Product Name</b></th>
+                            <th scope="col"><b>Department</b></th>
+                            <th scope="col"><b>Price</b></th>
+                            <th scope="col"><b>Quantity</b></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ItemsDiv">
+                        <!-- new table data here -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main javascript -->
+    <script src="../javascript/main.js"></script>
+    <!-- ajax for table -->
+    <script>$.get(currentURL + "/mostrecentitem", (request) => { appendToTable(request, "#ItemsDiv") })</script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  max-width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.border-1 {
+    border-width:3px !important;
+}
+
+.bg-cstm {
+  background-color: rgb(74, 111, 73)
+}
+
+.roundedbody {
+    border-radius: 4.25rem!important;
+}
+
+.rounded {
+    border-radius: 1rem!important;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1000px;
+}
+
+/* select, option { width: 50px; } */
+
+/* media query */
+@media screen and (max-width: 500px) { 
+
+  .table {
+  margin-left: -3.2rem
+  }
+
+  h1, h3 {
+    font-size: 1.25rem
+  }
+
+}
+
+
+
