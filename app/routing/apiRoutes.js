@@ -85,7 +85,7 @@ router.post("/posttodatabase",(req, res) => {
     connection.query(query, body, (err, result) => {
         if (err) {
             // catch error
-            return res.status(500).end("bad");
+            return res.status(500).end();
         }
 
         // return json to display on success page
