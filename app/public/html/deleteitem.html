@@ -47,19 +47,18 @@
         </div>
 
         <!-- input form -->
-        <form class="delete-item" action="/delete" method="delete">
+        <form class="delete-item" action="/delete" method="POST">
 
             <!-- id -->
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Product Id</span>
                 </div>
-                <input type="number" id="id" name="id" class="form-control" placeholder="product number"
-                    aria-label="product-id" aria-describedby="product-id">
+                <input type="number" id="id" name="id" class="form-control" placeholder="product number">
             </div>
 
             <!-- submit form button -->
-            <button type="submit" class="btn btn-outline-secondary mb-3" id="submitunits" value="create item">Delete Item</button>
+            <button type="submit" class="btn btn-outline-secondary mb-3" value="create item">Delete Item</button>
 
         </form>
 

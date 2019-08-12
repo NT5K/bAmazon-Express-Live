@@ -46,7 +46,7 @@
         <!-- form -->
         <div class="container-fluid text-center">
 
-            <form class="new-item" action="/posttodatabase" method="post">
+            <form class="new-item" action="/posttodatabase" method="POST">
 
                 <!-- name -->
                 <div class="row">
@@ -55,8 +55,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Product Name</span>
                             </div>
-                            <input type="text" id="product" name="product" class="form-control"
-                                placeholder="e.g. Spongebob Undies" aria-label="Username" aria-describedby="product-name">
+                            <input type="text" id="product" name="product" class="form-control" placeholder="e.g. Spongebob Undies">
                         </div>
                     </div>
                 </div>
@@ -64,7 +63,7 @@
                 <!-- department -->
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label class="input-group-text" for="department-name">Department</label>
+                        <label class="input-group-text" for="department">Department</label>
                     </div>
                     <select class="custom-select" id="department" name="department">
                         <option selected>Choose...</option>
@@ -113,6 +112,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- main javascript -->
     <script src="../javascript/main.js"></script>
+    <!-- dropdown javascript -->
+    <script>
+
+        // array to populate the department drop down
+        const departmentsArray = [
+            "Automotive", "Electronics & Accessories", "Furniture", "Home", "Office & Small Business",
+            "Lighting & Decor", "Women's Apparel", "Men's Apparel", "Boy's Clothing", "Girl's Clothing",
+            "Baby", "Pets", "Food and Beverages", "Beauty & Personal Care", "Health & Wellness",
+            "Household Essentials", "Luggage & Travel", "Sports & Outdoors"
+        ]
+
+        // populate the department drop down with data from departmentsArray
+        departmentsArray.forEach(data => {
+            $("#department").prepend('<option value="' + data + '">' + data + '</option>');
+        });
+
+    </script>
 
 </body>
 

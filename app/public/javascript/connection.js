@@ -11,8 +11,7 @@ if (process.env.JAWSDB_URL) {
         password: 'password',  // your password
         database: 'bamazon',
         port: 3306
-    })
-}
+    });
+};
 
-
-module.exports = connection
+module.exports = connection;
