@@ -70,7 +70,7 @@ $(".new-item").on("submit", (event) => {
     const department = i.department
 
     // validation
-    if (quantity > 200 || quantity <= 0 ||
+    if (quantity > 1000 || quantity <= 0 ||
         product.length > 255 || product.length === 0 || Number(price) <= 0 ||
         Number(price) > 10000 || department === 'Choose...') {
 
@@ -108,7 +108,7 @@ $(".update-quantity").on("submit", (event) => {
     const quantity = updateQuantity.quantity
 
     // validation
-    if (id > lastId.responseJSON[0].id || id <= 0 || quantity <= 0 || quantity > 200) {
+    if (id > lastId.responseJSON[0].id || id <= 0 || quantity <= 0 || quantity > 1000) {
 
         // redirect to the error page 
         return location.href = currentURL + "/error";
