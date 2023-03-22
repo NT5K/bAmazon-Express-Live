@@ -29,7 +29,6 @@ const appendToTable = (request, div) => {
 
 //===========================================================================
 
-// https://bamazon-express.heroku.com/
 const currentURL = window.location.origin;
 
 //===========================================================================

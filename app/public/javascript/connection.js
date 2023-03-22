@@ -1,17 +1,13 @@
 const mysql = require('mysql');
-
+require('dotenv').config();
 var connection;
 
-if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL)
-} else {
-    connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'password',  // your password
-        database: 'bamazon',
-        port: 3306
-    });
-};
+connection = mysql.createConnection({
+    host: process.env.URL,
+    user: process.env.USER,
+    password: process.env.PASSWORD,  // your password
+    database: process.env.DATABASE,
+    port: 3306
+});
 
 module.exports = connection;
